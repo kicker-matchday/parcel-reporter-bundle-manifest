@@ -1,0 +1,19 @@
+{
+  "name": "@kicker-matchday/parcel-reporter-bundle-manifest",
+  "version": "1.0.0-alpha.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@parcel/plugin": "^2.0.0-nightly.293",
+    "@types/url-join": "^4.0.0",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "typescript": "^3.9.5"
+  }
+}
