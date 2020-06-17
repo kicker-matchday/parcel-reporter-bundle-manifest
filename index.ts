@@ -29,7 +29,6 @@ export default new Reporter({
 
       for (let bundle of bundles) {
         const mainEntry = bundle.getMainEntry();
-        const publicUrl = bundle.target.publicUrl || '';
         if (mainEntry) {
           const assetPath = mainEntry.filePath;
           const assetName = normalisePath(path.relative(options.rootDir, assetPath));
