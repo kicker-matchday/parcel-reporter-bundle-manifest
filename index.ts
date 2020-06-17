@@ -1,6 +1,10 @@
 import * as path from 'path';
 import { Reporter } from '@parcel/plugin';
 
+const normalisePath = (p: string) => {
+  return p.replace(/[\\/]+/g, '/');
+};
+
 export default new Reporter({
   async report({ event, options }) {
     if (event.type !== 'buildSuccess') {
@@ -21,17 +25,18 @@ export default new Reporter({
     }
 
     // TODO: add publicUrl in pluginOptions inside @parcel/core
-    let publicUrl = process.env.PUBLIC_URL || '/';
+    let publicUrl = process.env.PUBLIC_URL || '';
     for (let [targetDir, bundles] of bundlesByTarget) {
       let manifest = {};
 
       for (let bundle of bundles) {
         const mainEntry = bundle.getMainEntry();
         if (mainEntry) {
-          const assetPath = bundle.getMainEntry().filePath;
-          const assetName = path.relative(options.rootDir, assetPath);
-          const bundleUrl = publicUrl + bundle.name;
-          manifest[assetName] = bundleUrl.replace(/[\\/]+/g, '/');
+          const assetPath = mainEntry.filePath;
+          const assetName = normalisePath(path.relative(options.rootDir, assetPath));
+          const bundleUrl = normalisePath(`${publicUrl}/${bundle.name}`);
+
+          manifest[assetName] = bundleUrl;
         }
       }
 
