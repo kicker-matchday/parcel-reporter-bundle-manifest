@@ -24,17 +24,16 @@ export default new Reporter({
       }
     }
 
-    // TODO: add publicUrl in pluginOptions inside @parcel/core
-    let publicUrl = process.env.PUBLIC_URL || '';
     for (let [targetDir, bundles] of bundlesByTarget) {
       let manifest = {};
 
       for (let bundle of bundles) {
         const mainEntry = bundle.getMainEntry();
+        const publicUrl = bundle.target.publicUrl || '';
         if (mainEntry) {
           const assetPath = mainEntry.filePath;
           const assetName = normalisePath(path.relative(options.rootDir, assetPath));
-          const bundleUrl = normalisePath(`${publicUrl}/${bundle.name}`);
+          const bundleUrl = normalisePath(`${bundle.target.publicUrl}/${bundle.name}`);
 
           manifest[assetName] = bundleUrl;
         }
