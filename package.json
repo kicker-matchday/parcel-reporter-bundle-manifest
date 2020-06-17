@@ -3,6 +3,13 @@
   "version": "1.0.0-alpha.1",
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kicker-matchday/parcel-reporter-bundle-manifest.git"
+  },
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
