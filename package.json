@@ -19,7 +19,7 @@
     "parcel": "^2.0.0-alpha.1.1"
   },
   "dependencies": {
-    "@parcel/plugin": "^2.0.0-nightly.293",
+    "@parcel/plugin": "^2.0.0-nightly.349",
     "@types/url-join": "^4.0.0",
     "url-join": "^4.0.1"
   },
