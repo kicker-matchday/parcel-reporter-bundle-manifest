@@ -31,7 +31,7 @@ export default new Reporter({
         const mainEntry = bundle.getMainEntry();
         if (mainEntry) {
           const assetPath = mainEntry.filePath;
-          const assetName = normalisePath(path.relative(options.rootDir, assetPath));
+          const assetName = normalisePath(path.relative(options.entryRoot, assetPath));
           const bundleUrl = normalisePath(`${bundle.target.publicUrl}/${bundle.name}`);
 
           manifest[assetName] = bundleUrl;
