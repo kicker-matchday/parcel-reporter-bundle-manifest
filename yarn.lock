@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@parcel/plugin@^2.0.0-nightly.293":
-  version "2.0.0-nightly.298"
-  resolved "https://registry.yarnpkg.com/@parcel/plugin/-/plugin-2.0.0-nightly.298.tgz#10051721633ac630347a4dee8834da53ca05ef46"
-  integrity sha512-WAyGscxV3VMJNfj/CNSE7FPAiHHZ3YVcKBdXVIOX81NyKNcbSj8+W3rMP7uKXauwklvd69CgQNkxtyOxSrrzwA==
+"@parcel/plugin@^2.0.0-nightly.349":
+  version "2.0.0-nightly.349"
+  resolved "https://registry.yarnpkg.com/@parcel/plugin/-/plugin-2.0.0-nightly.349.tgz#0e1b80846f450bfd2e8c6250cc7f4b782e37f99a"
+  integrity sha512-ungJkgIMoqGGW/Myinv1U42IpeF7J7ZKd5YeYfubSTDdLuqhgFaR5PbGOwM32zhcGPBckWFmY5/A5DZu2GEa9Q==
   dependencies:
-    "@parcel/types" "2.0.0-nightly.298+8fdd6193"
+    "@parcel/types" "2.0.0-nightly.349+283fd43b"
 
-"@parcel/types@2.0.0-nightly.298+8fdd6193":
-  version "2.0.0-nightly.298"
-  resolved "https://registry.yarnpkg.com/@parcel/types/-/types-2.0.0-nightly.298.tgz#c8e15273c76778cd8670a51c1416f98898ee9977"
-  integrity sha512-i05vrawlZDUBWby39h3dSQjYx6peHW9PfcmIzEwC9fK6MOSmkhZLNLwF5i5TZMGBO5m1GE6EBsMWkMV8MvcPPQ==
+"@parcel/types@2.0.0-nightly.349+283fd43b":
+  version "2.0.0-nightly.349"
+  resolved "https://registry.yarnpkg.com/@parcel/types/-/types-2.0.0-nightly.349.tgz#f13d684bdcc2547c6de2942f9a2571c51f5d7751"
+  integrity sha512-WCmhYVVYX180Vl9R/gNNSIrl4HCu6Qa3O190aipqVXzrVCWZnCganZczuDPzfiSEpWWqwbjbgjN1vzGa0vCiJw==
 
 "@types/node@^14.0.13":
   version "14.0.13"
